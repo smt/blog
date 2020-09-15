@@ -5,9 +5,8 @@
 </li>
 {% endmacro post_in_list %}
 
-{% macro term_in_list(term) %}
+{% macro tag_in_list(tag) %}
 <li style="align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px;">
-  <a href="{{ term.permalink | safe }}">{{ term.name }}</a>
+  <a class="tag" href="{{ tag.permalink | safe }}">{{ tag.name }}</a>
 </li>
-{% endmacro term_in_list %}
-
+{% endmacro tag_in_list %}

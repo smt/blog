@@ -3,7 +3,9 @@
 {% block title %}{{ page.title }} &middot; {{ config.title }}{% endblock title %}
 {% block description %}{{ page.description | default(value=config.description) }}{% endblock description %}
 
-{% block header %}<a class="back" href="/" title="Back">&larr;</a>{% endblock header %}
+{% block header %}
+<a class="back" href="/" title="Home">&larr;</a>
+{% endblock header %}
 
 {% block content %}
 <article>
