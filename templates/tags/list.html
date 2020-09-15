@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+{% block title %}{{ taxonomy.name }} listing &middot; {{ config.title }}{% endblock title %}
+{% block description %}{% endblock description %}
+
+{% block header %}
+<a class="back" href="/" title="Home">&larr;</a>
+{% endblock header %}
+
+{% block content %}
+<h1>Tags Index</h1>
+
+<ul class="homepage-list" style="list-style:none;padding:1rem 0;">
+  {% for tag in terms %}
+    {{ macros::tag_in_list(tag=tag) }}
+  {% endfor %}
+</ul>
+{% endblock content %}

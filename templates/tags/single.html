@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+{% block title %}{{ term.name }} &middot; {{ config.title }}{% endblock title %}
+{% block description %}{% endblock description %}
+
+{% block header %}
+<a class="back" href="/" title="Home">&larr;</a>
+{% endblock header %}
+
+{% block content %}
+<h1>Posts tagged <a href="#" class="tag">{{ term.name }}</a></h1>
+
+<ul class="homepage-list" style="list-style:none;padding:1rem 0;">
+  {% for post in term.pages %}
+    {{ macros::post_in_list(post=post) }}
+  {% endfor %}
+</ul>
+{% endblock content %}
