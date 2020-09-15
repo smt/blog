@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+
+{% block title %}{{ page.title }} &middot; {{ config.title }}{% endblock title %}
+{% block description %}{{ page.description | default(value=config.description) }}{% endblock description %}
+
+{% block header %}<a class="back" href="/" title="Back">&larr;</a>{% endblock header %}
+
+{% block content %}
+<article>
+
+  <h1>{{ page.title }}</h1>
+
+  {% if page.date %}
+    <div style="font-size:90%;margin-bottom:1em">
+      <time datetime="{{ page.date | date(format="%+") }}">{{ page.date | date(format="%B %d, %Y") }}</time>
+      {% if page.taxonomies.tags %}
+        <span style="margin-left:1ex">
+          {% for tag in page.taxonomies.tags %}
+            <a class="tag" href="{{ get_taxonomy_url(kind="tags", name=tag) }}">{{ tag }}</a>
+          {% endfor %}
+        </span>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {{ page.content | safe }}
+</article>
+{% endblock content %}

@@ -1,0 +1,69 @@
+$purple: #8a2be2;
+
+html,// {
+body {
+	background: #faf9f3;
+	color: #2d2d2d;
+	font: 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Helvetica, Arial, sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji", "Segoe UI Symbol";
+}
+a,
+a:visited {
+	color: $purple;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+main {
+	margin: auto;
+	max-width: 42rem;
+	padding: 0.8rem;
+}
+p {
+	margin-top: 0;
+}
+pre {
+	background: #fff;
+	overflow: scroll;
+	padding: 1rem;
+}
+td {
+	border: 1px solid #2d2d2d;
+	padding: 10px;
+}
+img {
+	height: auto;
+	max-width: 100%;
+}
+.back {
+	font-size: 2em;
+	position: absolute;
+	top: 2rem;
+	left: 1rem;
+	&:hover {
+		text-decoration: none;
+	}
+}
+.tag {
+	display: inline-block;
+	padding: 0 0.67ex;
+	background-color: adjust-color($purple, $saturation: -50%, $lightness: 32%);
+	border-radius: 3px;
+}
+.footnote-definition {
+	margin: 2em 0;
+	padding: 1em;
+	font-size: .889em;
+	background-color: adjust-color(#faf9f3, $lightness: -3%);
+}
+@media (max-width: 42rem) {
+	.back {
+		position: static;
+		font-size: 1rem;
+	}
+	.homepage-list li a {
+		width: 100%;
+	}
+}// }
