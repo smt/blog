@@ -2,7 +2,7 @@
 base_url = "https://blog.smt.io"
 
 title = "smt blog"
-description = "The personal weblog of Stephen Tudor"
+description = "Stephen Tudor's notes"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
